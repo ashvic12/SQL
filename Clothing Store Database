@@ -1,0 +1,27 @@
+--create a store database 
+
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, size TEXT);
+
+INSERT INTO store VALUES
+(1, "shirt", 2, 15, "L");
+INSERT INTO store VALUES (2, "tank top", 5, 20, "S");
+INSERT INTO store VALUES (3, "shorts", 2, 30, "M"); 
+INSERT INTO store VALUES (4, "pants", 2, 55, "M"); 
+INSERT INTO store VALUES (5, "blouse", 15, 25, "S");
+INSERT INTO store VALUES (6, "jeans", 34, 50, "0");
+INSERT INTO store VALUES (7, "leggings", 10, 40, "S");
+INSERT INTO store VALUES (8, "shoes", 12, 23, "6");
+INSERT INTO store VALUES (9, "boots", 33, 45, "7");
+INSERT INTO store VALUES (10, "bikini", 15, 24, "L");
+INSERT INTO store VALUES (11, "crop top", 2, 15, "S");
+INSERT INTO store VALUES (12, "bra", 2, 12, "A");
+INSERT INTO store VALUES (13, "tshirt", 7, 9, "L");
+INSERT INTO store VALUES (14, "sweater", 4, 45, "M");
+INSERT INTO store VALUES (15, "cardigan", 8, 19, "M");
+
+--display the database ordered by price 
+SELECT id, item, price FROM store ORDER BY price asc;
+
+--display total number of items available 
+SELECT SUM(quantity) FROM store; 
